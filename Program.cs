@@ -38,7 +38,27 @@ void ShowMenu()
             break;
     }
 }
+void ShowWelcome()
+{
+    string welcome = "Welcome to Screen Sound";
 
+    Console.WriteLine(@"
+░██████╗░█████╗░██████╗░███████╗███████╗███╗░░██╗  ░██████╗░█████╗░██╗░░░██╗███╗░░██╗██████╗░
+██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝████╗░██║  ██╔════╝██╔══██╗██║░░░██║████╗░██║██╔══██╗
+╚█████╗░██║░░╚═╝██████╔╝█████╗░░█████╗░░██╔██╗██║  ╚█████╗░██║░░██║██║░░░██║██╔██╗██║██║░░██║
+░╚═══██╗██║░░██╗██╔══██╗██╔══╝░░██╔══╝░░██║╚████║  ░╚═══██╗██║░░██║██║░░░██║██║╚████║██║░░██║
+██████╔╝╚█████╔╝██║░░██║███████╗███████╗██║░╚███║  ██████╔╝╚█████╔╝╚██████╔╝██║░╚███║██████╔╝
+╚═════╝░░╚════╝░╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░╚══╝  ╚═════╝░░╚════╝░░╚═════╝░╚═╝░░╚══╝╚═════╝░");
+    Console.WriteLine("\n" + welcome);
+}
+void ShowTitle(string title)
+{
+    int titleSize = title.Length;
+    string asct = string.Empty.PadLeft(titleSize, '*');
+    Console.WriteLine(asct);
+    Console.WriteLine(title);
+    Console.WriteLine(asct + "\n");
+}
 
 void Register()
 {
@@ -53,7 +73,6 @@ void Register()
     Console.Clear();
     ShowMenu();
 }
-
 void Show()
 {
     Console.Clear();
@@ -66,7 +85,6 @@ void Show()
     Console.Clear();
     ShowMenu();
 }
-
 void Rate()
 {
     Console.Clear();
@@ -91,7 +109,6 @@ void Rate()
         ShowMenu();
     }
 }
-
 void Average()
 {
     Console.Clear();
@@ -113,27 +130,4 @@ void Average()
         Console.Clear();
         ShowMenu();
     }
-}
-
-
-void ShowWelcome()
-{
-    string welcome = "Welcome to Screen Sound";
-
-    Console.WriteLine(@"
-░██████╗░█████╗░██████╗░███████╗███████╗███╗░░██╗  ░██████╗░█████╗░██╗░░░██╗███╗░░██╗██████╗░
-██╔════╝██╔══██╗██╔══██╗██╔════╝██╔════╝████╗░██║  ██╔════╝██╔══██╗██║░░░██║████╗░██║██╔══██╗
-╚█████╗░██║░░╚═╝██████╔╝█████╗░░█████╗░░██╔██╗██║  ╚█████╗░██║░░██║██║░░░██║██╔██╗██║██║░░██║
-░╚═══██╗██║░░██╗██╔══██╗██╔══╝░░██╔══╝░░██║╚████║  ░╚═══██╗██║░░██║██║░░░██║██║╚████║██║░░██║
-██████╔╝╚█████╔╝██║░░██║███████╗███████╗██║░╚███║  ██████╔╝╚█████╔╝╚██████╔╝██║░╚███║██████╔╝
-╚═════╝░░╚════╝░╚═╝░░╚═╝╚══════╝╚══════╝╚═╝░░╚══╝  ╚═════╝░░╚════╝░░╚═════╝░╚═╝░░╚══╝╚═════╝░");
-    Console.WriteLine("\n" + welcome);
-}
-void ShowTitle(string title)
-{
-    int titleSize = title.Length;
-    string asct = string.Empty.PadLeft(titleSize, '*');
-    Console.WriteLine(asct);
-    Console.WriteLine(title);
-    Console.WriteLine(asct + "\n");
 }

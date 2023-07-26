@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2012/06/nuspec.xsd">
+  <metadata>
+    <id>ScreenSound</id>
+    <version>1.0.0</version>
+    <authors>ScreenSound</authors>
+    <description>Package Description</description>
+    <dependencies>
+      <group targetFramework="net6.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="C:\Users\mayndi.borges\Documents\Mayndi\ScreenSound\bin\Debug\net6.0\ScreenSound.runtimeconfig.json" target="lib\net6.0\ScreenSound.runtimeconfig.json" />
+    <file src="C:\Users\mayndi.borges\Documents\Mayndi\ScreenSound\bin\Debug\net6.0\ScreenSound.dll" target="lib\net6.0\ScreenSound.dll" />
+  </files>
+</package>
