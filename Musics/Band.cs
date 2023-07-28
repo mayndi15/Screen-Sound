@@ -1,9 +1,20 @@
-﻿namespace ScreenSound.Sound
+﻿using ScreenSound.Musics.Interface;
+
+namespace ScreenSound.Musics
 {
-    public class Band
+    public class Band : IEvaluation
     {
         private List<Album> albums = new List<Album>();
+        private List<Evaluation> Grades = new List<Evaluation>();
         public string Name { get; }
+        public double Average
+        {
+            get 
+            { 
+                if(Grades.Count == 0) return 0;
+                else return Grades.Average(a => a.Grade);
+            }
+        }
 
         public Band(string name)
         {
@@ -13,6 +24,11 @@
         public void AddAlbum(Album album)
         {
             albums.Add(album);
+        }
+
+        public void AddGrade(Evaluation grade)
+        {
+            Grades.Add(grade);
         }
 
         public void ShowBand()

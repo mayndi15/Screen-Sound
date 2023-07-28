@@ -1,12 +1,12 @@
-﻿namespace ScreenSound.Podcast.Podcast
+﻿namespace ScreenSound.Podcasts
 {
     public class Episode
     {
-        private List<string> guests = new List<string>();
+        private List<string> Guests = new List<string>();
         public string Order { get; }
         public string Title { get; }
         public string Duration { get; }
-        public string Resume => $"{Order}. {Title}. ({Duration} min) - {string.Join(",", guests)}";
+        public string Resume => $"{Order}. {Title}. ({Duration} min) - {string.Join(",", Guests)}";
 
         public Episode(string order, string title, string duration)
         {
@@ -17,7 +17,7 @@
 
         public void AddGuest(string guest)
         {
-            guests.Add(guest);
+            Guests.Add(guest);
         }
     }
 }

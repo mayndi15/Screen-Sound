@@ -1,11 +1,11 @@
-﻿namespace ScreenSound.Podcast.Podcast
+﻿namespace ScreenSound.Podcasts
 {
     public class Podcast
     {
-        private List<Episode> episodes = new List<Episode>();
+        private List<Episode> Episodes = new List<Episode>();
         public string Name { get; }
         public string Host { get; }
-        public int TotalEpisodes => episodes.Count;
+        public int TotalEpisodes => Episodes.Count;
 
         public Podcast(string name, string host)
         {
@@ -15,14 +15,14 @@
 
         public void AddEpisode(Episode episode)
         {
-            episodes.Add(episode);
+            Episodes.Add(episode);
         }
 
         public void ShowPodcast()
         {
             Console.WriteLine($"Podcast: {Name} hosted by {Host}");
 
-            foreach (var episode in episodes.OrderBy(e => e.Order))
+            foreach (var episode in Episodes.OrderBy(e => e.Order))
             {
                 Console.WriteLine($"This podcast has {TotalEpisodes} episodes");
             }
